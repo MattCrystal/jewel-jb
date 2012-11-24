@@ -465,6 +465,9 @@ static struct msm_bus_paths bw_level_tbl[] = {
 	[7] = BW_MBPS(4264), /* At least 533 MHz on bus. */
 	[8] = BW_MBPS(4532), /* At least 600 MHz on bus. */
 	[9] = BW_MBPS(4624), /* At least 578 MHz on bus. */ 
+#ifndef MSM_CPU_MAX_FSB
+	[9] = BW_MBPS(5336), /* At least 667 MHz on bus. */
+#endif
 };
 
 static struct msm_bus_scale_pdata bus_client_pdata = {
@@ -541,6 +544,9 @@ static struct l2_level l2_freq_tbl_8960_kraitv2[] = {
 	[11] = { {  918000, HFPLL, 1, 0, 0x22 }, 1150000, 1150000, 6 },
 	[12] = { {  972000, HFPLL, 1, 0, 0x24 }, 1150000, 1150000, 6 },
 	[13] = { { 1026000, HFPLL, 1, 0, 0x26 }, 1150000, 1150000, 6 },
+	[11] = { {  918000, HFPLL, 1, 0, 0x22 }, 1150000, 1150000, 5 },
+	[12] = { {  972000, HFPLL, 1, 0, 0x24 }, 1150000, 1150000, 5 },
+	[13] = { { 1026000, HFPLL, 1, 0, 0x26 }, 1150000, 1150000, 5 },
 	[14] = { { 1080000, HFPLL, 1, 0, 0x28 }, 1150000, 1150000, 6 },
 	[15] = { { 1134000, HFPLL, 1, 0, 0x2A }, 1150000, 1150000, 6 },
 	[16] = { { 1188000, HFPLL, 1, 0, 0x2C }, 1150000, 1150000, 6 },
