@@ -106,9 +106,15 @@ xt_socket_get4_sk(const struct sk_buff *skb, struct xt_action_param *par)
 	const struct iphdr *iph = ip_hdr(skb);
 	struct udphdr _hdr, *hp = NULL;
 	struct sock *sk;
+<<<<<<< HEAD
 	__be32 daddr, saddr =0;
 	__be16 dport =0, sport =0;
 	u8 protocol =0;
+=======
+	__be32 daddr = 0, saddr = 0;
+	__be16 dport = 0, sport = 0;
+	u8 protocol = 0;
+>>>>>>> f46b3d6... Linaro -O3 fixes
 #ifdef XT_SOCKET_HAVE_CONNTRACK
 	struct nf_conn const *ct;
 	enum ip_conntrack_info ctinfo;
@@ -265,8 +271,13 @@ xt_socket_get6_sk(const struct sk_buff *skb, struct xt_action_param *par)
 	struct ipv6hdr *iph = ipv6_hdr(skb);
 	struct udphdr _hdr, *hp = NULL;
 	struct sock *sk;
+<<<<<<< HEAD
 	struct in6_addr *daddr =0, *saddr =0;
 	__be16 dport =0, sport =0;
+=======
+	struct in6_addr *daddr = NULL, *saddr = NULL;
+	__be16 dport = 0, sport = 0;
+>>>>>>> f46b3d6... Linaro -O3 fixes
 	int thoff, tproto;
 
 	tproto = ipv6_find_hdr(skb, &thoff, -1, NULL);
