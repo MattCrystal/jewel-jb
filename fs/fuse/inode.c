@@ -878,13 +878,9 @@ static int fuse_bdi_init(struct fuse_conn *fc, struct super_block *sb)
 	int err;
 
 	fc->bdi.name = "fuse";
-<<<<<<< HEAD
 	fc->bdi.ra_pages = (VM_MAX_READAHEAD * 1024) / PAGE_CACHE_SIZE;
-	
-=======
 	fc->bdi.ra_pages = max_readahead_pages
 	/* fuse does it's own writeback accounting */
->>>>>>> 4403ac3... dynamic read-ahead from CG
 	fc->bdi.capabilities = BDI_CAP_NO_ACCT_WB;
 
 	err = bdi_init(&fc->bdi);
