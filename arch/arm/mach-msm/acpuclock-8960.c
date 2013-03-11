@@ -464,7 +464,6 @@ static struct msm_bus_paths bw_level_tbl[] = {
 	[6] = BW_MBPS(3936), /* At least 492 MHz on bus. */
 	[7] = BW_MBPS(4264), /* At least 533 MHz on bus. */
 	[8] = BW_MBPS(4532), /* At least 600 MHz on bus. */
-	[9] = BW_MBPS(4624), /* At least 578 MHz on bus. */ 
 #ifndef MSM_CPU_MAX_FSB
 	[9] = BW_MBPS(5336), /* At least 667 MHz on bus. */
 #endif
