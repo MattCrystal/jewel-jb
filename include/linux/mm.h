@@ -1071,9 +1071,7 @@ extern int filemap_fault(struct vm_area_struct *, struct vm_fault *);
 int write_one_page(struct page *page, int wait);
 void task_dirty_inc(struct task_struct *tsk);
 
-#define VM_MAX_READAHEAD	1024	
-#define VM_MIN_READAHEAD	32	
-/* readahead.c */
+
 #define VM_MAX_READAHEAD	2048	/* kbytes */
 #define VM_MIN_READAHEAD	64	/* kbytes (includes current page) */
 
