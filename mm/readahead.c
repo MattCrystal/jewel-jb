@@ -18,8 +18,6 @@
 #include <linux/pagevec.h>
 #include <linux/pagemap.h>
 
-<<<<<<< HEAD
-=======
 #include <trace/events/mmcio.h>
 
 unsigned long max_readahead_pages = VM_MAX_READAHEAD * 1024 / PAGE_CACHE_SIZE;
@@ -52,7 +50,6 @@ early_param("readahead", readahead)
  * Initialise a struct file's readahead state.  Assumes that the caller has
  * memset *ra to zero.
  */
->>>>>>> 4403ac3... dynamic read-ahead from CG
 void
 file_ra_state_init(struct file_ra_state *ra, struct address_space *mapping)
 {
