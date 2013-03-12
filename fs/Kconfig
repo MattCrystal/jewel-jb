@@ -7,10 +7,12 @@ menu "File systems"
 # Use unaligned word dcache accesses
 config DCACHE_WORD_ACCESS
        bool
+
 config VFS_CACHE_PRESSURE
   	int "vfs Cache Pressure"
   	default 50
   	help
+
 if BLOCK
 
 source "fs/ext2/Kconfig"
@@ -284,3 +286,4 @@ source "fs/nls/Kconfig"
 source "fs/dlm/Kconfig"
 
 endmenu
+
