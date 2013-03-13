@@ -129,7 +129,7 @@ KBUILD_CFLAGS = $(subst -pg, , $(ORIG_CFLAGS))
 endif
 
 ccflags-y := -fpic -fno-builtin -I$(obj)
-asflags-y := -Wa,-march=armv7-a$(plus_sec)
+asflags-y := -Wa,-march=all
 
 # Supply kernel BSS size to the decompressor via a linker symbol.
 KBSS_SZ = $(shell $(CROSS_COMPILE)size $(obj)/../../../../vmlinux | \
@@ -159,7 +159,6 @@ $(obj)/lib1funcs.S: $(srctree)/arch/$(SRCARCH)/lib/lib1funcs.S
 	$(call cmd,shipped)
 
 # For __aeabi_llsl
-AFLAGS_ashldi3.o +=-Wa,-march=armv7-a$(plus_sec)
 ashldi3 = $(obj)/ashldi3.o
 
 AFLAGS_ashldi3.o +=-Wa,-march=armv7-a$(plus_sec)

@@ -1625,6 +1625,12 @@ config CPU_VOLTAGE_TABLE
 	bool "Enable CPU Voltage Table via sysfs for adjustements"
 	default n
 
+config MSM_CPU_OC
+	bool "CPU Max 2.1Ghz clk support"
+	default n
+	help
+	To support the Max 2.1Ghz.
+
 config MSM_MPDEC
         bool "Enable kernel based mpdecision"
    depends on MSM_SMP
@@ -2647,6 +2653,13 @@ config SENSE_4_PLUS
 	default y
 	help
 	  Support for SENSE 4 PLUS.
+
+config FORCE_FAST_CHARGE
+	bool "Force AC charge mode at will"  
+	default y
+	help
+  	  A simple sysfs interface to force adapters that
+	  are detected as USB to charge as AC.
 
 endif
 
