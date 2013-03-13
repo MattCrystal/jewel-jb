@@ -2285,7 +2285,7 @@ int usb_port_resume(struct usb_device *udev, pm_message_t msg)
 	clear_bit(port1, hub->busy_bits);
 
 	status = check_port_resume_type(udev,
-			hub, port1, status, portchange, portstatus =0);
+			hub, port1, status, portchange =0, portstatus =0);
 	if (status == 0)
 		status = finish_port_resume(udev);
 	if (status < 0) {
